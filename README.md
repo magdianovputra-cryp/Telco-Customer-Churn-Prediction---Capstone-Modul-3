@@ -118,4 +118,43 @@ Metrik evaluasi yang akan digunakan dalam model ini adalah F2-score, agar kita m
 
  ---
 
+ ### **Kesimpulan**
+1. **Churn pelanggan merupakan masalah signifikan** bagi perusahaan telekomunikasi Telco, dengan sekitar 26.5% pelanggan berhenti berlangganan. Ini menunjukkan **perlunya strategi retensi pelanggan yang efektif** yang perlu dilakukan oleh perusahaan.
+
+2. Model machine learning yang dikembangkan, yaitu **AdaBoostClassifier** dengan hyperparameter tuning, berhasil memprediksi pelanggan yang berisiko churn dengan **F2-score sebesar 0.735** pada test set. 
+    - Model ini menunjukkan **kemampuan yang baik dalam mendeteksi pelanggan churn (recall 0.86), meskipun precisionnya menurun menjadi 0.48**.
+    - Tuning hyperpatameter berhasil meningkatkan performa model dalam mengenali pelanggan yang benar-benar akan churn. **F2-Score dipilih sebagai metrik karena dampak biaya False Negative (kehilangan pelanggan, $500) lebih besar dibanding False Positive($100)**.
+
+3. Evaluasi model menunjukkan bahwa **model tidak mengalami overfitting atau data leakage**, sehingga hasil evaluasi dapat dipercaya untuk interpretasi bisnis selanjutnya.
+
+4. **Efisiensi biaya berhasil ditingkatkan dengan penggunaan model machine learning, mengurangi kerugian hingga 40%** dibandingkan pendekatan tanpa machine learning.
+    - Tanpa Machine Learning: Total kerugian $71,300
+    - Dengan Machine Learning: Total kerugian $42,400
+    - Penghematan biaya: $28,900 (40.5% pengurangan kerugian)\
+
+5. Pengaruh Fitur terhadap Prediksi Churn:
+    - **Fitur 'Contract' memiliki pengaruh paling besar terhadap prediksi churn pelanggan**. Pelanggan dengan kontrak jangka panjang (One year, Two year) cenderung memiliki risiko churn lebih rendah dibandingkan kontrak bulanan (Month-to-month).
+    - **Fitur 'Tenure' juga sangat penting**, menunjukkan bahwa semakin lama pelanggan berlangganan, semakin kecil kemungkinan mereka untuk churn.
+    - **Fitur 'Internet Service' menunjukkan bahwa jenis layanan internet yang dipilih pelanggan mempengaruhi risiko churn**. Pelanggan dengan layanan Fiber optic memiliki risiko churn lebih tinggi dibandingkan DSL atau tanpa layanan internet. Hal ini bisa jadi karena biaya layanan Fiber optic yang lebih tinggi dibandingkan DSL atau tanpa layanan internet.
+
+---
+
+### **Rekomendasi**
+
+1. **Model akan semakin akurat jika data yang digunakan mencakup lebih banyak aspek customer behavior**. Misalnya:
+    - **Riwayat pembayaran** (tepat waktu atau sering menunggak).
+    - **Informasi demografi** (usia, lokasi, tingkat pendapatan, jenis tempat tinggal).
+
+2. **Fokus pada pelanggan dengan probabilitas churn tinggi** agar biaya marketing yang dikeluarkan untuk promosi atau campaign bisa lebih efisien.
+
+3. **Develop strategi untuk Customer Retention** untuk mengurangi churn, seperti :
+    - Penawaran kontrak tahunan
+    - Loyalty Program untuk New Customer
+    - Bundling package layanan internet dan telepon
+
+4. **Lakukan sistem monitoring model dan evaluasi berkala**. Seperti :
+    - Buat dashboard churn prediction untuk memantau metrik utama seperti recall, precision, dan churn rate aktual tiap bulan.
+    - **Lakukan retraining model secara rutin** (misalnya setiap 6 bulan) agar **model tetap relevan dengan customer behavior yang dinamis**. 
+
+
  
