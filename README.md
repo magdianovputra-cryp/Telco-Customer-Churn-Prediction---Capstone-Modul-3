@@ -4,7 +4,7 @@ Manajemen  perusahaan telekomunikasi PT. Nusantara Telekomindo ingin mengurangi 
 
 Selama ini perusahaan mengeluarkan biaya promosi ke seluruh pelanggan, tanpa mengetahui siapa saja pelanggan yang benar-benar berisiko untuk churn. Hal ini menyebabkan pemborosan anggaran promosi, karena promosi diberikan kepada pelanggan yang sebenarnya tidak berisiko untuk churn.
 
---
+---
 
 ### **Problem Statement**
 Saat ini perusahaan tidak memiliki suatu alat atau sistem yang mampu memprediksi pelanggan mana yang berisiko tinggi untuk churn. Oleh karena itu, perusahaan ingin mengembangkan model prediksi churn pelanggan yang dapat mengidentifikasi pelanggan yang berisiko tinggi untuk churn, sehingga perusahaan dapat fokus memberikan promosi kepada pelanggan tersebut.
@@ -14,7 +14,7 @@ Diperlukan suatu model machine learning yang dapat membantu perusahaan dalam:
 2. Mengoptimalkan anggaran promosi dengan menargetkan pelanggan yang berisiko tinggi untuk churn.
 3. Mengurangi pembengkakan biaya promosi yang tidak efektif.
 
---
+---
 
 ### **Metric Evaluation**
 - Cost FP (False Positive) = Biaya promosi yang diberikan kepada pelanggan yang tidak berisiko churn = $100
@@ -24,21 +24,21 @@ Karena cost FN lebih besar daripada cost FP, maka model yang dikembangkan harus 
 
 Metrik evaluasi yang akan digunakan dalam model ini adalah F2-score, agar kita memberi bobot lebih pada FN sambil tetap memerhatikan FP.
 
---
+---
 
 ### **Goals**
 1. Mengembangkan model machine learning yang bisa memprediksi pelanggan yang berisiko untuk churn berdasarkan data historis pelanggan.
 2. Mengurangi kerugian biaya akibat churn pelanggan dengan menargetkan promosi kepada pelanggan yang berisiko untuk churn.
 3. Meningkatkan efisiensi anggaran promosi dengan mengurangi pemborosan pada pelanggan yang tidak berisiko churn.
 
---
+---
 
 ### **Data Overview**
 1. Data terdiri dari 4930 baris dan 11 kolom.
 2. Terdapat 10 fitur dan 1 fitur target (churn).
 3. Fitur terdiri dari 2 data tipe numerik dan 9 data tipe kategorikal.
 
---
+---
 
 ### **Penjelasan isi dari tiap Kolom**
 ---
@@ -116,6 +116,6 @@ Metrik evaluasi yang akan digunakan dalam model ini adalah F2-score, agar kita m
     * **Yes** → Pelanggan berhenti berlangganan.
     * **No** → Pelanggan tetap berlangganan.
 
- --
+ ---
 
  
